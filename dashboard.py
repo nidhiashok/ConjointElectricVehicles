@@ -863,7 +863,7 @@ def render_content(tab):
 
             html.H3(children="Parameter Sweep", style={'textAlign': 'left'}),
             html.Div(children="""
-            Each row in the table below performs a price and/or a data sweep over the product identified 
+            Each row in the table below performs a price and/or a data sweep over the product identified
             by "ID". We may then examine impact on financial measures and Inflows/Outflows."""),
             dash_table.DataTable(
               id='adding-rows-table', editable=True, row_deletable=True
@@ -1650,4 +1650,4 @@ def display_grid(jsonified_data, baseVar, viewType):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(host='0.0.0.0',port=8050,debug=True)
